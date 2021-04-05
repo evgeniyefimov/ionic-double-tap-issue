@@ -5,8 +5,9 @@ import { Tab3Page } from './tab3.page';
 const routes: Routes = [
   {
     path: '',
-    component: Tab3Page,
-  }
+    pathMatch: 'full',
+    redirectTo: 'child-1',
+  },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(
+    private readonly navController: NavController,
+  ) {}
 
+  onGoToChild1() {
+    this.navController.navigateForward('/tabs/tab1/child-1');
+  }
+
+  onGoToChild2() {
+    this.navController.navigateForward('/tabs/tab1/child-2');
+  }
 }
